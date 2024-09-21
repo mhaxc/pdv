@@ -6,6 +6,8 @@ use App\Http\Requests\ProdutoRequest as RequestsProdutoRequest;
 use Illuminate\Http\Request;
 use Illuminate\Http\ProdutoRequest;
 use App\Models\Produto;
+use App\Models\Categoria;
+use App\Models\Fornecedor;
 
 class ProdutoController extends Controller
 {
