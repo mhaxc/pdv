@@ -29,7 +29,9 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(['nome' => 'required']);
+        Categoria::create($request->all());
+        return redirect()->route('categorias.index');
     }
 
     /**

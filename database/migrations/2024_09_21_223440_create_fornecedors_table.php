@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('fornecedors', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->string('email')->nullable();
+            $table->string('telefone')->nullable();
             $table->timestamps();
         });
     }
