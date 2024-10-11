@@ -17,6 +17,7 @@
             <th>#</th>
             <th>NOME</th>
             <th>PREÇO</th>
+            <th>CATEGORIA</th>
             <th>ESTOQUE</th>
             <th>DESCRIÇAO</th>
             <th>AÇAO</th>
@@ -29,8 +30,10 @@
             <td class="align-middle">{{ $loop->iteration }}</td>
             <td class="align-middle">{{ $produto->nome }}</td>
             <td class="align-middle">R$ {{ $produto->preco }}</td>
+            <td class="align-middle">{{ $produto->categoria->nome }}</td>
             <td class="align-middle">{{ $produto->estoque }}</td>
             <td class="align-middle">{{ $produto->descricao }}</td>
+
             <td class="align-middle">
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <a href="{{ route('produtos.show', $produto->id) }}" type="button" class="btn btn-secondary">Mostrar</a>

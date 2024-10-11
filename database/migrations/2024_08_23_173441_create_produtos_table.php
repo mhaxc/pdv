@@ -15,12 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->decimal('preco', 8, 2);
-            $table->integer('quantidade_estoque')->default(0);
-            $table->integer('volume');
-            $table->string('imagem')->nullable();
+            $table->integer('estoque')->default(0);
+            $table->string('volume');
             $table->text('descricao');
-            $table->foreignId('categoria_id')->constrained()->onDelete('cascade');
-            $table->foreignId('fornecedor_id')->constrained()->onDelete('cascade');
+            $table->foreignId('categoria_id')->constrained('categorias');
             $table->timestamps();
 
 

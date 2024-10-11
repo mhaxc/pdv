@@ -13,7 +13,7 @@
             <label for="cliente_id">Cliente:</label>
             <select name="cliente_id" class="form-control">
                 @foreach ($clientes as $cliente)
-                <option value="{{ $cliente->id }}">{{ $cliente->nome }}</option>
+                <option value ="{{ $cliente->id }}">{{ $cliente->nome }}</option>
                 @endforeach
             </select>
         </div>
@@ -30,6 +30,22 @@
 
                 <label for="quantidade">Quantidade(ex. 0.5 ou 1 )</label>
                 <input type="text" name="produtos[0][quantidade]" class="form-control" required>
+            </div>
+        </div>
+        <br />
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="data_venda">Data da venda </label>
+                <div class="input-group date">
+                    <input type="text" id="data_venda" name="data_venda"
+                        value="{{ date('d/m/Y') }}"
+
+                        class="form-control" />
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                </div>
             </div>
         </div>
         <br />

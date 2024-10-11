@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class VendaRequest extends FormRequest
+class StoreCategoriaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,20 +22,7 @@ class VendaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'produto_id'=>'required',
-            'quantidade' => 'required',
-            'preco' => 'required'
-
+            'nome' => 'required'
         ];
     }
-
-
-
-    public function messages()
-     {
-         return[
-             'preco.regex' => 'Inserir . (ponto) em vez de , (vírgula) no preço.'
-         ];
-     }
-
 }

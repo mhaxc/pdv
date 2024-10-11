@@ -25,7 +25,12 @@ class ProdutoRequest extends FormRequest
             'nome'=> 'required',
             'preco' => 'required',
             'estoque' => 'required',
-            'descricao' => 'required'
+            'descricao' => 'required',
+            'volume' => 'required|integer',
+            'imagem' => 'nullable|image',
+            'categoria_id' => 'required'
+
+
         ];
     }
 }

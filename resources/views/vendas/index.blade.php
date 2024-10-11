@@ -30,7 +30,7 @@
             <td class="align-middle">{{ $venda->cliente->nome }}</td>
             <td class="align-middle">{{ $venda->cliente->endereco  }}</td>
             <td class="align-middle">R$ {{ number_format($venda->total, 2, ',', '.') }}</td>
-            <td>{{ $venda->created_at->format('d/m/Y') }}</td>
+            <td>{{ $venda->data_venda->format('d/m/Y') }}</td>
             <td class="align-middle">
 
                 <div class="btn-group" role="group" aria-label="Basic example">

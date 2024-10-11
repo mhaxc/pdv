@@ -55,6 +55,7 @@ class VendaController extends Controller
             $vendaProduto->produto_id = $produto->id;
             $vendaProduto->quantidade = $quantidade;
             $vendaProduto->preco = $preco;
+            $vendaProduto->data_venda = $data_venda;
             $vendaProduto->save();
 
             $totalVenda += $totalProduto;
@@ -98,6 +99,7 @@ class VendaController extends Controller
             'cliente_id' => $request->cliente_id,
             'produto_id' => $request->produto_id,
             'quantidade' => $request->quantidade,
+            'data_venda'=>$request->data_venda,
             'total' => $total,
         ]);
 
